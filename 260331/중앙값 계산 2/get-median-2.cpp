@@ -8,12 +8,12 @@ int n;
 
 int main() {
     cin >> n;
-    vector<int> v(n);
+    vector<int> v(n+1);
     for (int i = 1; i <= n; i++) {
         cin >> v[i];
-        if(i%2!=0){
-            sort(v.begin(), v.end());
-            cout << v[i/2-1] << " ";
+        if(i%2 != 0){
+            sort(v.begin()+1, v.begin()+i+1);
+            cout << v[i/2+1] << " ";
         }
     }
 
