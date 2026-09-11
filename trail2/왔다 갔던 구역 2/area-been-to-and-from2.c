@@ -13,14 +13,12 @@ int main() {
         scanf("%d %c", &distance, &direction);
         if(direction=='L'){
             for(int j = 0; j< distance; j++){
-                now--;
-                line[now]++;
+                line[--now]++;
             }
         }
         else{
             for(int j = 0; j< distance; j++){
-                line[now]++;
-                now++;
+                line[now++]++;
             }
         }
         // printf("%d %d\n", i, now);
